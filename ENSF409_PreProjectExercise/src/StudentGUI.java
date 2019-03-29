@@ -23,7 +23,7 @@ import javax.swing.*;
 
 /**
  * Class StudentGUI provides a User Interface for a simple demonstration of maintaining student records
- * @author Alex Gorkoff, Matteo Messana, Usman Farooq
+ * @author  Alex Gorkoff, Matteo Messana, Usman Farooq
  */
 
 public class StudentGUI extends JFrame{
