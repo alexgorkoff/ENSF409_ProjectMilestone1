@@ -6,6 +6,7 @@ class Node {
 	
 	Data data;
 	Node left, right;
+	
 	/**
 	 * 
 	 * @param id student id
@@ -13,6 +14,7 @@ class Node {
 	 * @param major student's major
 	 * @param year student's year of study
 	 */
+	
 	public Node(String id, String faculty, String major, String year) {
 		// creating a data item
 		data = new Data(id, faculty, major, year);

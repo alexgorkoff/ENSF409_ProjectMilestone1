@@ -21,9 +21,12 @@ import javax.swing.JOptionPane.*;
 
 import javax.swing.*;
 
+/**
+ * Class StudentGUI provides a User Interface for a simple demonstration of maintaining student records
+ * @author Alex
+ */
+
 public class StudentGUI extends JFrame{
-	
-	//test change to repository
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -42,6 +45,12 @@ public class StudentGUI extends JFrame{
 
 	private JScrollPane scrollPanel;
 	
+	/**
+	 * Constructor of class StudentGUI
+	 * @param heightPixels : defines the default height of the main frame in pixels
+	 * @param widthPixels : defines the default width of the main frame in pixels
+	 * @param title : defines a title for the main frame
+	 */
 	public StudentGUI(int heightPixels, int widthPixels, String title) {
 		
 		mainFrame = new JFrame(title);
@@ -60,6 +69,10 @@ public class StudentGUI extends JFrame{
 		mainFrame.setVisible(true);
 	}
 	
+	/**
+	 * Defines components and parameters for the top panel in the main frame
+	 * @return titlePanel : the initialized title panel of the main frame
+	 */
 	public JPanel createTitlePanel() {
 		
 		JPanel titlePanel = new JPanel(new FlowLayout());
@@ -72,6 +85,10 @@ public class StudentGUI extends JFrame{
 		return titlePanel;
 	}
 	
+	/**
+	 * Defines components and parameters of the center panel in the main frame
+	 * @return : displayPanel : the initialized middle component of the main frame
+	 */
 	public JPanel createDisplayPanel() {
 		
 		JPanel displayPanel = new JPanel();
@@ -98,6 +115,11 @@ public class StudentGUI extends JFrame{
 		return displayPanel;
 	}
 	
+	/**
+	 * Initializes the bottom panel of the main frame 
+	 * Defines action listeners for all buttons in the button panel
+	 * @return buttonPanel: the initialized bottom component of the main frame.
+	 */
 	public JPanel createButtonPanel() {
 		
 		JPanel buttonPanel = new JPanel(new FlowLayout());
@@ -168,6 +190,10 @@ public class StudentGUI extends JFrame{
 		return buttonPanel;
 	}
 	
+	/**
+	 * Verifies whether the BST has been initialized or not
+	 * @return true (if BST exists) or false (if BST has not yet been created from importing text file)
+	 */
 	public boolean checkBSTExists() {
 		
 		if(BST == null) {
@@ -179,6 +205,10 @@ public class StudentGUI extends JFrame{
 		return true;
 	}
 	
+	/**
+	 * Creates a BST from the text file of student records
+	 * @param fileName : the name of the file to be imported
+	 */
 	public void constructBST(String fileName) {
 		
 		File file = new File(fileName);
@@ -211,6 +241,9 @@ public class StudentGUI extends JFrame{
 		}
 	}
 	
+	/**
+	 * Outputs the contents BST to the GUI center panel
+	 */
 	public void printBSTToGUI() {
 		
 		StringWriter buffer = new StringWriter();
@@ -228,6 +261,9 @@ public class StudentGUI extends JFrame{
 		
 	}
 	
+	/**
+	 * Creates a user dialog to indicate the information of a student (if found) or to indicate that a record does not exist
+	 */
 	public void printFoundMessage() {
 		
 		String idString = JOptionPane.showInputDialog("Enter the ID of the student you'd like to find: ");
@@ -240,6 +276,9 @@ public class StudentGUI extends JFrame{
 			JOptionPane.showMessageDialog(frame, "Here's the student! \n" + foundNode);
 	}
 	
+	/**
+	 * Creates a new student record from user input and inserts it into the BST
+	 */
 	public void insertInformation() {
 		
 		JTextField studentID = new JTextField();
