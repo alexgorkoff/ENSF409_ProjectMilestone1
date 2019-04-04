@@ -93,7 +93,7 @@ public class StudentGUI extends JFrame{
 		
 		JPanel displayPanel = new JPanel();
 		
-		displayPanel.setPreferredSize(new Dimension(450, 210));
+		displayPanel.setPreferredSize(new Dimension(500, 210));
 		
 		listModel = new DefaultListModel<String>();
 		listArea = new JList<String>(listModel);
@@ -106,7 +106,7 @@ public class StudentGUI extends JFrame{
 		
 		scrollPanel = new JScrollPane(listArea);
 		
-		scrollPanel.setPreferredSize(new Dimension(450, 210));
+		scrollPanel.setPreferredSize(new Dimension(500, 210));
 		scrollPanel.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		scrollPanel.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
@@ -301,7 +301,7 @@ public class StudentGUI extends JFrame{
 	}
 	
 	public static void main(String [] args) {
-		StudentGUI theStudentGUI = new StudentGUI(450, 300, "Student Record Program");
+		StudentGUI theStudentGUI = new StudentGUI(500, 300, "Student Record Program");
 	}
 	
 }
